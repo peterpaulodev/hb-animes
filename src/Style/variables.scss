@@ -1,0 +1,17 @@
+/* PALETTE HEX */
+$main-color: #0e0b16ff;
+$main-color-dark: #0A080F;
+$sub-color: #a239caff;
+$complement-color-1: #4717f6ff;
+$complement-color-2: #e7dfddff;
+
+/* PALETTE Gradient */
+$gradient-top: linear-gradient(0deg, #0e0b16ff, #a239caff, #4717f6ff, #e7dfddff);
+$gradient-right: linear-gradient(90deg, #0e0b16ff, #a239caff, #4717f6ff, #e7dfddff);
+$gradient-bottom: linear-gradient(180deg, #0e0b16ff, #a239caff, #4717f6ff, #e7dfddff);
+$gradient-left: linear-gradient(270deg, #0e0b16ff, #a239caff, #4717f6ff, #e7dfddff);
+$gradient-top-right: linear-gradient(45deg, #0e0b16ff, #a239caff, #4717f6ff, #e7dfddff);
+$gradient-bottom-right: linear-gradient(135deg, #0e0b16ff, #a239caff, #4717f6ff, #e7dfddff);
+$gradient-top-left: linear-gradient(225deg, #0e0b16ff, #a239caff, #4717f6ff, #e7dfddff);
+$gradient-bottom-left: linear-gradient(315deg, #0e0b16ff, #a239caff, #4717f6ff, #e7dfddff);
+$gradient-radial: radial-gradient(#0e0b16ff, #a239caff, #4717f6ff, #e7dfddff);

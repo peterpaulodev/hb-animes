@@ -1,0 +1,45 @@
+@import "variables";
+
+html,
+body,
+#app {
+  width: 100%;
+  min-height: 100vh;
+  background: $main-color;
+  color: $complement-color-2;
+}
+
+a {
+  color: $complement-color-2 !important;
+  text-decoration: underline !important;
+}
+
+/* mouse over link */
+a:hover {
+  opacity: 0.6;
+  text-decoration: none !important;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+
+#main-nav {
+  background: $main-color-dark;
+  //border-bottom: .5px solid $complement-color-2;
+
+  .nav-link {
+    &.disabled {
+      opacity: 0.6;
+      text-decoration: none !important;
+    }
+  }
+}
+
+.slider-card {
+  width: 180px;
+  height: 230px;
+  background: white;
+  margin: 0px 20px;
+}

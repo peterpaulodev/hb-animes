@@ -1,18 +1,32 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <SliderMainPage :list="list"/>
+
+    <CarouselCards title="Lançamentos" :list="[1,2,3,4,5,6,7,8,9,10]" class="mt-4"/>
+
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import SliderMainPage from "../components/SliderMainPage";
+import CarouselCards from "../components/CarouselCards";
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+    CarouselCards,
+    SliderMainPage
+  },
+  data() {
+    return {
+      list: [
+        {backgroundColor: '#3f51b5', width: '100%'},
+        {backgroundColor: '#eee', width: '100%'},
+        {backgroundColor: '#f44336', width: '100%'},
+      ],
+    }
+  },
+  mounted() {
   }
 }
 </script>
