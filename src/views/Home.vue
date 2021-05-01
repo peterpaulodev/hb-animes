@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <SliderMainPage :list="list"/>
-    <CarouselCards title="Lançamentos" :list="seasonalAnimeList" class="mt-5 mb-4"/>
+    <CarouselCards :title="carouselTitle" :list="seasonalAnimeList" class="mt-5 mb-4"/>
   </div>
 </template>
 
@@ -22,14 +22,36 @@ export default {
         {backgroundColor: '#eee', width: '100%'},
         {backgroundColor: '#f44336', width: '100%'},
       ],
-      seasonalAnimeList: []
+      seasonalAnimeList: [],
+      carouselTitle: ''
+    }
+  },
+  methods: {
+    translateSeason(season) {
+      let value = ''
+      switch (season) {
+        case 'Spring':
+          value = 'Primavera'
+          break;
+        case 'Winter':
+          value = 'Inverno'
+          break;
+        case 'Summer':
+          value = 'Verão'
+          break;
+        case 'Fall':
+          value = 'Outono'
+          break;
+      }
+      return value
     }
   },
   mounted() {
     this.$store.dispatch('getSeasonAnimes')
-      .then(res => {
-        this.seasonalAnimeList = res.data.anime
-      })
+        .then(res => {
+          this.carouselTitle = `Lançamentos (${this.translateSeason(res.data.season_name)})`
+          this.seasonalAnimeList = res.data.anime
+        })
   }
 }
 </script>
