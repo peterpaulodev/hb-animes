@@ -1,9 +1,7 @@
 <template>
   <div class="home">
     <SliderMainPage :list="list"/>
-
-    <CarouselCards title="Lançamentos" :list="[1,2,3,4,5,6,7,8,9,10]" class="mt-4"/>
-
+    <CarouselCards title="Lançamentos" :list="seasonalAnimeList" class="mt-5 mb-4"/>
   </div>
 </template>
 
@@ -24,9 +22,14 @@ export default {
         {backgroundColor: '#eee', width: '100%'},
         {backgroundColor: '#f44336', width: '100%'},
       ],
+      seasonalAnimeList: []
     }
   },
   mounted() {
+    this.$store.dispatch('getSeasonAnimes')
+      .then(res => {
+        this.seasonalAnimeList = res.data.anime
+      })
   }
 }
 </script>

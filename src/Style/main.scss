@@ -39,7 +39,57 @@ a:active {
 
 .slider-card {
   width: 180px;
-  height: 230px;
+  height: 250px;
   background: white;
-  margin: 0px 20px;
+  margin: 0px 10px;
+
+  .container-cover {
+    position: relative;
+    height: 100%;
+
+    &:hover {
+      .cover-overlay {
+        opacity: 0.8;
+      }
+    }
+
+    .cover-overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: .5s ease;
+      background-color: $sub-color;
+
+      .text {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        font-weight: bold;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+
+    }
+
+    .slider-cover {
+      height: 100%;
+      width: 100%;
+    }
+  }
 }
+
+.VueCarousel-navigation-button {
+  color: white !important;
+  font-size: 20px !important;
+  padding-bottom: 70px !important;
+}
+
