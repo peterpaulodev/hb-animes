@@ -1,4 +1,10 @@
-# hb-animes
+# How About Animes?
+
+> Site dedicado para você, Otaku!
+> Aqui você irá encontrar:
+> * Os lançamentos da temporada
+> * As principais notícias
+> * Tudo categorizado por genêros!
 
 ## Project setup
 ```
